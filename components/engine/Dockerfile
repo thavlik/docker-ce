@@ -26,7 +26,7 @@
 
 ARG CROSS="false"
 
-FROM arm32v7/golang:1.12.3-jessie AS base
+FROM arm32v7/golang:1.8.7-jessie AS base
 # allow replacing httpredir or deb mirror
 ARG APT_MIRROR=deb.debian.org
 RUN sed -ri "s/(httpredir|deb).debian.org/$APT_MIRROR/g" /etc/apt/sources.list
